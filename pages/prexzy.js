@@ -32,7 +32,7 @@ export default function Home() {
 
         setSubmitting(true);
         try {
-            const response = await fetch('/api/numbers', {
+            const response = await fetch('/api/prexzy', { // Change to /api/prexzy
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ export default function Home() {
     const handleDelete = async (entryToDelete) => {
         setDeleting(true);
         try {
-            const response = await fetch('/api/numbers', {
+            const response = await fetch('/api/prexzy', { // Change to /api/prexzy
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ export default function Home() {
                     required
                     style={styles.input}
                 />
-                <button type="submit" disabled={submitting} style={styles.button}>
+                <button type="submit" disabled={submitting} style={styles.submitButton}>
                     {submitting ? 'Adding...' : 'Add'}
                 </button>
             </form>
@@ -164,9 +164,9 @@ const styles = {
         border: '1px solid #ccc',
         borderRadius: '4px',
     },
-    button: {
+    submitButton: {
         padding: '10px',
-        backgroundColor: '#007BFF',
+        backgroundColor: '#28a745', // Green color for the add button
         color: 'white',
         border: 'none',
         borderRadius: '4px',
@@ -174,7 +174,7 @@ const styles = {
     },
     deleteButton: {
         padding: '5px 10px',
-        backgroundColor: 'red',
+        backgroundColor: '#dc3545', // Red color for the delete button
         color: 'white',
         border: 'none',
         borderRadius: '4px',
