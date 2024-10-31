@@ -12,7 +12,7 @@ export default function Home() {
     useEffect(() => {
         const fetchEntries = async () => {
             try {
-                const response = await fetch('/bot/prexzy');
+                const response = await fetch('/api/prexzy');
                 if (!response.ok) throw new Error('Failed to fetch entries');
                 const data = await response.json();
                 setEntries(data);
