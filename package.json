@@ -1,6 +1,7 @@
 {
-  "name": "nextjs_api_project",
+  "name": "toxxic-api-dashboard",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -8,7 +9,17 @@
   },
   "dependencies": {
     "next": "latest",
+    "@google-cloud/text-to-speech": "^3.0.0",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "node-fetch": "^2.6.7",
+    "dotenv": "^16.0.3",
+    "formidable": "^3.5.2",
+    "express": "^4.18.2",
+    "axios": "^0.27.2" , 
+    "@vercel/postgres": "^0.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
